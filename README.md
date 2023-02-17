@@ -1,6 +1,6 @@
 # aircraft_detector军用飞行器检测项目
 <div>
-本工程是AI<b>深度学习</b>在计算机视觉<b><i>物体检测</i></b>方面的应用，采用的数据集是Kaggle 军用飞行器数据集，共<b>40</b>个分类，<b>10,000</b>多张图片，占用<b>10GB</b>的磁盘空间，该数据集Kaggle持续在更新中。<br>
+本工程是AI<b>深度学习</b>在计算机视觉<b><i>物体检测</i></b>方面的应用，采用的数据集是Kaggle 军用飞行器数据集，共<b>40</b>个分类，<b>10,000</b>多张图片，数据集压缩包占用<b>10GB</b>的磁盘空间，该数据集Kaggle持续在更新中。<br>
 </div>
 <br>
 
@@ -48,12 +48,40 @@ pip install pycocotools
 
 <li><b>本工程运行效果</b><br>
     以下检测结果图片在本工程的test_img目录下，检测结果上方文字，左边表示航空器类型，右边表示检测结果置信度。<br><br>
-    检测图片路径：test_img/7854921f5e41d063b65bca8b429b6aa8.jpg<br>
+    检测图片路径：<a href="test_img/7854921f5e41d063b65bca8b429b6aa8.jpg">test_img/7854921f5e41d063b65bca8b429b6aa8.jpg</a><br>
     <img width="521" alt="image" src="https://user-images.githubusercontent.com/36066270/219657506-67d3406f-ac83-4ccd-bc90-842f17be536b.png"><br><br>
-    检测图片路径：test_img/02d408885ea1339fac6e2344086599ab.jpg<br>
+    检测图片路径：<a href="test_img/02d408885ea1339fac6e2344086599ab.jpg">test_img/02d408885ea1339fac6e2344086599ab.jpg</a><br>
     <img width="787" alt="image" src="https://user-images.githubusercontent.com/36066270/219657823-e0d68fe0-12fa-41f8-9f8f-0513461433c5.png"><br><br>
-    检测图片路径：test_img/00ebecac178be3c3890a067d6a28234e.jpg<br>
+    检测图片路径：<a href="test_img/00ebecac178be3c3890a067d6a28234e.jpg">test_img/00ebecac178be3c3890a067d6a28234e.jpg</a><br>
     <img width="465" alt="image" src="https://user-images.githubusercontent.com/36066270/219658699-75fd9c95-e053-4f01-ab6c-a99620e5db46.png"><br><br>
+
+美国C130大力神运输机视频检测效果： <a href="test_img/video/C130_detect.mp4">test_img/video/C130_detect.mp4</a><br>
+美国F35攻击机视频检测效果：<a href="test_img/video/F35_detect.mp4">test_img/video/F35_detect.mp4</a><br>
+
+<li><b>模型性能(COCO评估)</b><br>
+    数据集10, 000张图片, 8,000张用于训练，剩下2,000张图片用于测试和评估，采用GPU P100训练70小时, 总共经历250个迭代(epochs)，目前达到的性能Iou 0.50以上的mAP为64.1%。召回率为61.5%.<br><br>
+    
+<div align=center>
+<b>模改后的算法模型性能指标(epochs=249)</b>
+
+|          PR指标         |     IoU   |   area | maxDets| AP/AR取值 |
+|          :-----         |   :----:  | :----: | :----: |  :----:  |
+| Average Precision  (AP) | 0.50:0.95 |  all   |   100  |  0.497   |
+| Average Precision  (AP) | 0.50      |  all   |   100  |  0.641   |
+| Average Precision  (AP) | 0.75      |  all   |   100  |  0.571   |
+| Average Precision  (AP) | 0.50:0.95 |  small |   100  |  0.160   |
+| Average Precision  (AP) | 0.50:0.95 | medium |   100  |  0.238   |
+| Average Precision  (AP) | 0.50:0.95 | large  |   100  |  0.535   |
+| Average Recall     (AR) | 0.50:0.95 |  all   |   1    |  0.499   |
+| Average Recall     (AR) | 0.50:0.95 |  all   |   10   |  0.615   |
+| Average Recall     (AR) | 0.50:0.95 |  all   |   100  |  0.615   |
+| Average Recall     (AR) | 0.50:0.95 |  small |   100  |  0.183   |
+| Average Recall     (AR) | 0.50:0.95 | medium |   100  |  0.314   |
+| Average Recall     (AR) | 0.50:0.95 | large  |   100  |  0.655   |
+</div>
+    
+<br>
+
     
 <li><b>展望</b><br>
-本工程对小物体(50*50以内)检测效果不太佳，另外对极相似的机型检测效果还不太稳定，比如F15、F35、J20、Mig31的检测效果比较摇摆，后续需对此两点进一步性能优化。
+本工程对小物体(100*100以内)检测效果不太佳，另外对极相似的机型检测效果还不太稳定，比如F15、F35、J20、Mig31的检测效果比较摇摆，后续需对此两点进一步性能优化。
