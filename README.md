@@ -1,6 +1,6 @@
 # aircraft_detector军用飞行器检测项目
 <div>
-本工程是计算机视觉<b><i>物体检测</i></b>方面的应用，采用的数据集是Kaggle 军用飞行器数据集，共<b>40</b>个分类，<b>10,000</b>多张图片，占用<b>10GB</b>的磁盘空间，该数据集Kaggle持续在更新中。<br>
+本工程是AI<b>深度学习</b>在计算机视觉<b><i>物体检测</i></b>方面的应用，采用的数据集是Kaggle 军用飞行器数据集，共<b>40</b>个分类，<b>10,000</b>多张图片，占用<b>10GB</b>的磁盘空间，该数据集Kaggle持续在更新中。<br>
 </div>
 <br>
 
@@ -43,7 +43,17 @@ pip install pycocotools
     <img width="813" alt="image" src="https://user-images.githubusercontent.com/36066270/219656949-dd7f7981-2f2a-49ff-a6b2-553306c1c126.png"><br>
     <b>SSD原理图</b> 
 </div>
+<br>
+<br>
+
+<li><b>本工程运行效果</b><br>
+    以下检测结果图片在本工程的test_img目录下，检测结果上方文字，左边表示航空器类型，右边表示检测结果置信度。<br><br>
+    检测图片路径：test_img/7854921f5e41d063b65bca8b429b6aa8.jpg<br>
+    <img width="521" alt="image" src="https://user-images.githubusercontent.com/36066270/219657506-67d3406f-ac83-4ccd-bc90-842f17be536b.png"><br><br>
+    检测图片路径：test_img/02d408885ea1339fac6e2344086599ab.jpg<br>
+    <img width="787" alt="image" src="https://user-images.githubusercontent.com/36066270/219657823-e0d68fe0-12fa-41f8-9f8f-0513461433c5.png"><br><br>
+    检测图片路径：test_img/00ebecac178be3c3890a067d6a28234e.jpg<br>
+    <img width="465" alt="image" src="https://user-images.githubusercontent.com/36066270/219658699-75fd9c95-e053-4f01-ab6c-a99620e5db46.png"><br><br>
     
-<br>
-<br>
-<br>
+<li><b>展望</b><br>
+本工程对小物体(50*50以内)检测效果不太佳，另外对极相似的机型检测效果还不太稳定，比如F15、F35、J20、Mig31的检测效果比较摇摆，后续需对此两点进一步性能优化。
