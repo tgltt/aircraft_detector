@@ -20,6 +20,21 @@
 <br>
     
 <li><b>工程结构说明</b><br>
+
+|    文件/文件夹         |                   功能描述               |
+|       ----            |                    ----                 |
+| kaggle_jupyter        | 存放本工程运行在jupyter notebook的实现文件 |
+| paper                 | 存放模型相关的论文(ResNet、SSD)           |
+| res50+ssd             | 存放ResNet50预训练模型                   |
+| save_weights          | 存放模型每个迭代训练完成后的模型参数       |
+| test_img              | 存放测试模型用的图片和视频                |
+| src                   | 存放SSD模改后的模型                      |
+| train_utils           | 存放训练功能相关的文件                    |
+| train_ssd300.py       | 训练模型的主函数及入口类                  |
+| my_dataset.py         | 定义批量访问数据集的功能类                 |
+| transforms.py         | 预处理图片的功能类                        |
+| predict_test.py       | 验证模型的推理功能类, 只验证图片           |
+| predict_test_video.py | 验证模型的推理功能类, 只验证视频           |
 <br>
 <br>
 
