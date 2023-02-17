@@ -10,7 +10,7 @@
 </div>
 <br>
  
-<li><b>Kaggle数据集</b><br>
+<li><b>Kaggle军用飞行器检测数据集</b><br>
 <div>
 数据集地址：https://www.kaggle.com/datasets/a2015003713/militaryaircraftdetectiondataset <br>
 数据集页面：
