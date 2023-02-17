@@ -35,6 +35,7 @@
 | transforms.py         | 预处理图片的功能类                        |
 | predict_test.py       | 验证模型的推理功能类, 只验证图片           |
 | predict_test_video.py | 验证模型的推理功能类, 只验证视频           |
+| calculate_dataset_mean_std.py | 计算训练集图像RGB三个通道的均值和方差, 由于军用飞行器数据集并非ImageNet、CoCo、Voc这类国际大型数据集，故数据集和标准差需自行计算 |
 <br>
 <br>
 
