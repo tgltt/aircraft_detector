@@ -97,7 +97,13 @@ pip install pycocotools
 </div>
     
 <br>
+<div>
 
+![image](https://user-images.githubusercontent.com/36066270/219755281-e56bede1-f4f4-46da-8c04-a1fc67d698e8.png)
+
+
+
+</div>
     
 <li><b>展望</b><br>
 本工程对小物体(100*100以内)检测效果不太佳，另外对极相似的机型检测效果还不太稳定，比如F15、F35、J20、Mig31的检测效果比较摇摆，后续需对此两点进一步性能优化。
